@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/wiki/xacro"> 
+  <xacro:macro name="contact_bumper" params="name frame_name">
+   <gazebo reference="${frame_name}">
+    <sensor name="fixed_contact_sensor" type="contact">
+       <always_on>true</always_on>
+       <update_rate>1000.0</update_rate>
+       <contact>
+         <collision>${frame_name}_collision</collision>
+       </contact>
+
+     <plugin name="${name}_gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
+       <alwaysOn>true</alwaysOn>
+       <updateRate>1000.0</updateRate>
+       <bumperTopicName>${name}_bumper</bumperTopicName>
+       <frameName>${frame_name}</frameName>
+     </plugin>
+    </sensor>
+   </gazebo>
+  </xacro:macro>
+</robot>
+
+
+

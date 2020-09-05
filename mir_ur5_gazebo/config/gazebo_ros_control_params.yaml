@@ -1,0 +1,10 @@
+# parameters for Gazebo ROS control plugin
+robot1_ns/gazebo_ros_control/pid_gains:
+    $(arg tf_prefix)shoulder_pan_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)shoulder_lift_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)elbow_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)wrist_1_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)wrist_2_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)wrist_3_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)left_wheel_joint: {p: 100.0, i: 0.01, d: 10.0}
+    $(arg tf_prefix)right_wheel_joint: {p: 100.0, i: 0.01, d: 10.0}
